@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.brasileirao"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    sourceSets {
+        androidTest {
+            java.srcDirs += "src/sharedTest/java"
+        }
+        test {
+            java.srcDirs += "src/sharedTest/java"
+        }
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation project(Modules.core)
+
+    implementation Libs.kotlin
+    implementation Libs.coreKtx
+    implementation Libs.appCompat
+    implementation Libs.material
+    implementation Libs.appCompat
+    implementation Libs.material
+    implementation Libs.koin
+    implementation Libs.koinViewModel
+    implementation Libs.koinAndroid
+    implementation Libs.constraintLayout
+    implementation Libs.viewBinding
+    implementation Libs.threeTenABP
+    implementation Libs.glide
+    implementation Libs.swipeRefresh
+    implementation Libs.legacySupport
+    implementation Libs.retrofit
+    implementation Libs.retrofitGsonConverter
+    implementation Libs.retrofitRxJava2Adapter
+    implementation Libs.rxJava2
+    implementation Libs.rxJava2Android
+    implementation Libs.room
+    implementation Libs.roomRxJava2
+    annotationProcessor Libs.roomCompiler
+    kapt Libs.roomCompiler
+
+    testImplementation Libs.junit
+    testImplementation Libs.koinTest
+    testImplementation Libs.mockk
+    testImplementation Libs.coreTesting
+    testImplementation Libs.robolectric
+    testImplementation project(Modules.testingLib)
+
+    androidTestImplementation Libs.espresso
+    androidTestImplementation Libs.androidXTestCore
+    androidTestImplementation Libs.androidXTestRunner
+    androidTestImplementation Libs.androidXTestExtJunitKtx
+    androidTestImplementation Libs.mockkAndroid
+    androidTestImplementation Libs.koinTest
+    androidTestImplementation project(Modules.testingLib)
+
+    debugImplementation Libs.fragmentTesting
+}

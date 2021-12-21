@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.details.GameDetailsFragment">
+
+    <ImageView
+        android:id="@+id/detailTeam1Badge"
+        android:layout_width="@dimen/badge_size"
+        android:layout_height="@dimen/badge_size"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/detailTeam2Badge"
+        android:layout_width="@dimen/badge_size"
+        android:layout_height="@dimen/badge_size"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/detailTeam1Badge"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/detailTeam1Score"
+        android:layout_width="@dimen/score_text_size"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="@dimen/large_text_size"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/detailTeam1Badge"
+        app:layout_constraintStart_toEndOf="@+id/detailTeam1Badge"
+        app:layout_constraintTop_toTopOf="@+id/detailTeam1Badge"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/detailTeam2Score"
+        android:layout_width="@dimen/score_text_size"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/detailTeam2Badge"
+        app:layout_constraintEnd_toStartOf="@+id/detailTeam2Badge"
+        app:layout_constraintTop_toTopOf="@+id/detailTeam2Badge"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/versus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/versus"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/detailTeam1Score"
+        app:layout_constraintEnd_toStartOf="@+id/detailTeam2Score"
+        app:layout_constraintStart_toEndOf="@+id/detailTeam1Score"
+        app:layout_constraintTop_toTopOf="@+id/detailTeam1Score" />
+
+    <TextView
+        android:id="@+id/detailTeam1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        tools:text="São Paulo"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/detailTeam1Badge"
+        app:layout_constraintStart_toStartOf="@+id/detailTeam1Badge"
+        app:layout_constraintTop_toBottomOf="@+id/detailTeam1Badge" />
+
+    <TextView
+        android:id="@+id/detailTeam2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        tools:text="Palmeiras"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/detailTeam2Badge"
+        app:layout_constraintStart_toStartOf="@+id/detailTeam2Badge"
+        app:layout_constraintTop_toBottomOf="@+id/detailTeam2Badge" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/highlightsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeAndLocation" />
+
+    <TextView
+        android:id="@+id/timeAndLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/detailTeam2Name"
+        app:layout_constraintStart_toEndOf="@+id/detailTeam1Name"
+        app:layout_constraintTop_toBottomOf="@+id/detailTeam1Name"
+        tools:text="22/10/2021 às 19:00 - Maracanã" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

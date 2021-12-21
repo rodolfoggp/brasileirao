@@ -1,0 +1,87 @@
+{
+   "games":[
+      {
+         "id":1,
+         "team1Performance":{
+            "team":"São Paulo",
+            "score":1,
+            "badge":"http://s.glbimg.com/es/sde/f/equipes/2014/04/14/sao_paulo_60x60.png"
+         },
+         "team2Performance":{
+            "team":"Palmeiras",
+            "score":2,
+            "badge":"http://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png"
+         },
+         "dateTime":"2022-01-01T13:00:00.000",
+         "location":"Morumbi",
+         "highlights":[
+            {
+               "minute":12,
+               "description":"Falta do atacante Fulano, do São Paulo"
+            },
+            {
+               "minute":16,
+               "description":"Gol do São Paulo"
+            },
+            {
+               "minute":28,
+               "description":"Gol do Palmeiras"
+            },
+            {
+               "minute":41,
+               "description":"Gol do Palmeiras"
+            }
+         ]
+      },
+      {
+         "id":2,
+         "team1Performance":{
+            "team":"Corinthians",
+            "score":1,
+            "badge":"http://s.glbimg.com/es/sde/f/equipes/2014/04/14/corinthians_60x60.png"
+         },
+         "team2Performance":{
+            "team":"Vasco",
+            "score":0,
+            "badge":"http://s.glbimg.com/es/sde/f/equipes/2014/04/14/vasco_60x60.png"
+         },
+         "dateTime":"2022-01-05T16:00:00.000",
+         "location":"São Januário",
+         "highlights":[
+            {
+               "minute":9,
+               "description":"Gol do Corinthians"
+            },
+            {
+               "minute":27,
+               "description":"Falta do Vasco"
+            }
+         ]
+      },
+      {
+         "id":3,
+         "team1Performance":{
+            "team":"Grêmio",
+            "score":1,
+            "badge":"http://s.glbimg.com/es/sde/f/equipes/2014/04/14/gremio_60x60.png"
+         },
+         "team2Performance":{
+            "team":"Santos",
+            "score":1,
+            "badge":"http://s.glbimg.com/es/sde/f/equipes/2014/04/14/santos_60x60.png"
+         },
+         "dateTime":"2022-01-11T19:00:00.000",
+         "location":"Arena do Grêmio",
+         "highlights":[
+            {
+               "minute":10,
+               "description":"Gol do Santos"
+            },
+            {
+               "minute":61,
+               "description":"Gol do Grêmio"
+            }
+         ]
+      }
+   ]
+}

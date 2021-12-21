@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_text_size">30sp</dimen>
+    <dimen name="game_list_item_height">120dp</dimen>
+    <dimen name="badge_size">60dp</dimen>
+    <dimen name="score_text_size">35dp</dimen>
+    <dimen name="list_item_text_size">14sp</dimen>
+    <dimen name="highlight_time_textbox_size">60dp</dimen>
+    <dimen name="highlight_text_margin">12dp</dimen>
+</resources>

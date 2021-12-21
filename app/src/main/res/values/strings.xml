@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Brasileirão</string>
+    <string name="versus">x</string>
+    <string name="minute_highlight">%s\'</string>
+    <string name="error_finding_game_message">Não foi possível exibir o jogo solicitado</string>
+    <string name="error_getting_games_message">Houve um erro ao buscar a lista de jogos</string>
+    <string name="error_title">Erro</string>
+    <string name="time_and_location_details">%1$s às %2$s - %3$s</string>
+</resources>
